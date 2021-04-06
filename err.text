@@ -1,0 +1,1551 @@
+https://lenguajejs.com/javascript/caracteristicas/array-functions/#find-b%C3%BAsqueda
+
+https://www.youtube.com/watch?v=ak4238Z9BlA
+
+   Ciudadano no encontrado
+   Ingresa los 8 dígitos de tu DNI 
+
+ HAGAMOS MÁS SEGURA LA VOTACIÓN
+
+Para votar más rápido, imprime y/o anota los siguientes datos, te ayudarán a ubicar directamente tu mesa, pabellón y número de orden en la Relación de Electores. 
+
+ENTENDIDO
+
+https://www.consultamiembrodemesa.eleccionesgenerales2021.pe/#/
+
+/*
+ let nombre = document.querySelector('name');
+ let lastname = document.querySelector('lastname');
+ let num_dni = document.querySelector('dni');
+//76594220
+console.log(dni);
+ let n1 = "", p2 = "", d2="";
+const url = 'https://dniruc.apisperu.com/api/v1/dni/76594220?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImprbTc4OTc1QHp3b2hvLmNvbSJ9.DIOyPMNAVeODWYyIn9zACls_Ep5B0vKVJ1KM5Zv4CfQ';
+
+ fetch(url).then(response => response.json())
+     .then(data => {
+        // n1 = data.dni;
+        //  p2 = data.apellidoMaterno;
+         nombre.textContent = data.dni;
+         console.log(data);
+     })
+
+ .catch(err => console.log(err))
+*/
+
+//  location.href = "/votacion.html";
+
+
+const local_data = [
+    {
+        "type":"No es miembro de mesa",
+        "region":"Amazonas/Chachapoyas/Chachapoyas ",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Amazonas/Bagua/Bagua",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Amazonas/Bongará/Jumbilla",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Amazonas/Condorcanqui/Santa María de Nieva 	",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Amazonas/Luya/Lámud",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Amazonas/Rodríguez de Mendoza/Mendoza",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Amazonas/Utcubamba/Bagua Grande",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Áncash/ Chimbote/Santa",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Áncash/ Huaraz/Huaraz",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Áncash/Casma/Casma",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Áncash/Huarmey/Huarmey",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Áncash/Caraz/Huaylas",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Áncash/Carhuaz/Carhuaz",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Áncash/Yungay/Yungay",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Áncash/Pomabamba/Pomabamba",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Áncash/Huari/Huari",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Áncash/San Marcos/Huari",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Apurímac/Abancay/Abancay",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Apurímac/Andahuaylas/Andahuaylas",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Apurímac/Antabamba/Antabamba",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Apurímac/Aymaraes/Chalhuanca",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Apurímac/Cotabambas/Tambobamba",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region": "Apurímac/ Chincheros / Chincheros",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Apurímac/Grau/Chuquibambilla",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Arequipa/Arequipa/Arequipa",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Arequipa/Camaná/Camaná",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Arequipa/Caravelí/Caravelí",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Arequipa/Castilla/Aplao",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Arequipa/Caylloma/Chivay",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Arequipa/Condesuyos/Chuquibamba",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Arequipa/Islay/Mollendo",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Arequipa/La Unión/Cotahuasi",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Ayacucho/Huamanga/Ayacucho",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Ayacucho/Cangallo/Cangallo",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Ayacucho/Huanca Sancos/Huanca Sancos",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Ayacucho/Huanta/Huanta ",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Ayacucho/La Mar/San Miguel",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Ayacucho/Lucanas/Puquio ",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Ayacucho/Parinacochas/Coracora",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Ayacucho/Páucar del Sara/Sara",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Ayacucho/Sucre/Querobamba",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Ayacucho/Víctor Fajardo/Huancapi",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Ayacucho/Vilcashuamán/Vilcashuamán",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Cajamarca/Cajamarca/Cajamarca",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Cajamarca/Celendín/Celendín",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Cajamarca/Chota/Chota",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Cajamarca/Contumazá/Contumazá",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Cajamarca/Cutervo/Cutervo",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Cajamarca/Hualgayoc/Bambamarca",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Cajamarca/Jaén/Jaén",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Cajamarca/San Ignacio/San Ignacio de la Frontera",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Cajamarca/San Marcos/San Marcos",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Cajamarca/San Miguel/San Miguel de Pallaques ",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Cajamarca/San Pablo/San Pablo",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Cajamarca/Santa Cruz/Santa Cruz de Succhabamba",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Callao/Callao/Callao ",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Callao/Callao/Bellavista",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Callao/Callao/Carmen de La Legua-Reynoso",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Callao/Callao/La Perla ",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Callao/Callao/La Punta",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Callao/Callao/Ventanilla",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region": "Callao/Callao/Mi Perú",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Cuzco/Cuzco/Cuzco",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Cuzco/Acomayo/Acomayo",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Cuzco/Anta/Anta",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Cuzco/Calca/Calca",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Cuzco/Canas/Yanaoca",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Cuzco/Canchis/Sicuani",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Cuzco/Chumbivilcas/Santo Tomás",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Cuzco/Espinar/Yauri",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Cuzco/La Convención/Quillabamba",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Cuzco/Paruro/Paruro",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Cuzco/Paucartambo/Paucartambo",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Cuzco/Quispicanchi/Urcos",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Cuzco/Urubamba/Urubamba",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Huancavelica/Huancavelica/Huancavelica",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Huancavelica/Acobamba/Acobamba",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Huancavelica/Angaraes/Lircay ",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Huancavelica/Castrovirreyna/Castrovirreyna",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Huancavelica/Churcampa/Churcampa",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Huancavelica/Huaytará/Huaytará",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Huancavelica/Tayacaja/Pampas",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Huancavelica/Tayacaja/Pampas",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Huánuco/Huánuco/Huánuco",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Huánuco/Ambo/Ambo",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Huánuco/Dos de Mayo/La Unión",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Huánuco/Huacaybamba/Huacaybamba",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Huánuco/Huamalíes/Llata",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Huánuco/Leoncio Prado/Tingo María",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Huánuco/Marañón/Huacrachuco",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Huánuco/Pachitea/Panao",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Huánuco/Puerto Inca/Puerto Inca",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Huánuco/Lauricocha/Jesús",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Huánuco/Yarowilca/Chavinillo",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Ica/Ica/Ica",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Ica/Chincha/Chincha Alta",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Ica/Nazca/Nazca",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Ica/Palpa/Palpa",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Ica/Pisco/Pisco",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Junín/Huancayo/Huancayo",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Junín/Concepción/Concepción",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Junín/Chanchamayo/La Merced",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type":"No es miembro de mesa",
+        "region":"Junín/Jauja/Jauja",
+        "local": "",
+        "direccion": "",
+        "referencia":""
+    },
+    {
+        "type":"Es miembro de mesa",
+        "region":"Junín/Junín/Junín",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Junín/Tarma/Tarma",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Junín/Yauli/La Oroya",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Junín/Chupaca/Chupaca",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "La Libertad/Trujillo/Trujillo",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "La Libertad/Ascope/Ascope",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "La Libertad/Bolívar/Bolívar",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "La Libertad/Chepén/Chepén",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "La Libertad/Julcán/Julcán",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "La Libertad/Otuzco/Otuzco",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "La Libertad/Pacasmayo/San Pedro de Lloc",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "La Libertad/Pataz/Tayabamba",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "La Libertad/Sánchez Carrión/Huamachuco",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "La Libertad/Santiago de Chuco/Santiago de Chuco",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "La Libertad/Gran Chimú/Cascas",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "La Libertad/Virú/Virú",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Lambayeque/Chiclayo/Chiclayo",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Lambayeque/Ferreñafe/Ferreñafe",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Lambayeque/Lambayeque/Lambayeque",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Lima/Lima/Lima",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Lima/Barranca/Barranca",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Lima/Cajatambo/Cajatambo",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Lima/Canta/Canta ",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Lima/Cañete/Cañete",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Lima/Huaral/Huaral ",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Lima/Huarochirí/Matucana",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Lima/Huaura/Huacho",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Lima/Oyón/Oyón",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Lima/Yauyos/Yauyos",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Loreto/Maynas/Iquitos",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Loreto/Alto Amazonas/Yurimaguas",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Loreto/Loreto/Nauta",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Loreto/Mariscal Ramón Castilla/Caballococha",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Loreto/Requena/Requena",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Loreto/Ucayali/Contamana",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Loreto/Datem del Marañón/San Lorenzo",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Loreto/Putumayo/San Antonio del Estrecho",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Madre de Dios/Tambopata/Puerto Maldonado",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Madre de Dios/Manu/Salvación",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Madre de Dios/Tahuamanu/Iñapari",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Moquegua/Moquegua/Ilo",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Moquegua/Moquegua/General Sánchez Cerro",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Moquegua/Moquegua/Mariscal Nieto",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Pasco/Pasco/Cerro de Pasco",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Pasco/Daniel A. Carrión/Yanahuanca",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Pasco/Oxapampa/Oxapampa",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Piura/Piura/San Miguel de Piura",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Piura/Ayabaca/Ayabaca",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Piura/Huancabamba/Huancabamba",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Piura/Morropón/Chulucanas",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Piura/Paita/Paita",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Piura/Sullana/Sullana",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Piura/Talara/Talara",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Piura/Sechura/Sechura",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Puno/Puno/Puno",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Puno/Puno/Azángaro",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Puno/Puno/Carabaya",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Puno/Puno/Chucuito",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Puno/Puno/El Collao",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Puno/Puno/Huancané",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Puno/Puno/Lampa",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Puno/Puno/Melgar",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Puno/Puno/Moho",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Puno/Puno/Sandia",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Puno/Puno/San Antonio de Putina",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Puno/Puno/San Román",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Puno/Puno/Yunguyo",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "San Martin/Moyobamba/Moyobamba",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "San Martin/Bellavista/Bellavista",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "San Martin/El Dorado/San José de Sisa",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "San Martin/Huallaga/Saposoa",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "San Martin/Lamas/Lamas",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "San Martin/Mariscal Cáceres/Juanjuí",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "San Martin/Picota/Picota",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "San Martin/Rioja/Rioja",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "San Martin/San Martín/Tarapoto",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "San Martin/Tocache/Tocache",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Tacna/Tacna/Candarave",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Tacna/Tacna/Jorge Basadre",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Tacna/Tacna/Tacna",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Tacna/Tacna/Tarata",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Tumbes/Tumbes/Tumbes",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Tumbes/Zarumilla/Zarumilla",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Tumbes/Contralmirante Villar/Zorritos",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Ucayali/Portillo/Pucallpa",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Ucayali/Atalaya/Atalaya",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "Es miembro de mesa",
+        "region": "Ucayali/Padre Abad/Aguaytía",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    },
+    {
+        "type": "No es miembro de mesa",
+        "region": "Ucayali/Purús/Puerto Esperanza",
+        "local": "",
+        "direccion": "",
+        "referencia": ""
+    }
+
+];
+
+// https://www.neoguias.com/funciones-flecha-es6/
+
+datos que faltan :
+- datos de localizacion
+- verficar que los caracteres son menores a 9 en el input
+- verficar si la respuesta de json es nula que no muestre la ventana de datos
+- verficar que input sus datos sean completos
+- falta la ventana de modal
+- colocarle iconos 
+
+
+const local_data = [
+    {
+         key:1,
+         type: "No es miembro de mesa",
+         region: "Amazonas/Chachapoyas/Chachapoyas ",
+         local: "",
+         direccion: "",
+         referencia: ""
+    },
+    {
+         key: 2,
+         type: "Es miembro de mesa",
+         region: "Amazonas/Bagua/Bagua",
+         local: "",
+         direccion: "",
+         referencia: ""
+    },
+    {
+        key: 3,
+        type: "No es miembro de mesa",
+        region: "Amazonas/Bongará/Jumbilla",
+        local: "",
+        direccion: "",
+        referencia: ""
+    }
+];
+
+// const local_one = local_data.map(data_base => data_base.key+"  "+data_base.type
+//     + "  " +data_base.region);
+
+
+const local_one = local_data.find(e => {
+    
+    return e.key === aletorio(3);
+
+} 
+
+);
+//     + "  " +data_base.region);
+//console.log(Object.keys(local_data));
+console.log(local_one);
+
+switch (key) {
+        case 1:
+            document.querySelector('.type').textContent = 'No es miembro de mesa';
+            document.querySelector('.region').textContent = 'Amazonas/Chachapoyas/Chachapoyas';
+            document.querySelector('.local').textContent = 'local1';
+            document.querySelector('.address').textContent = 'address1';
+            document.querySelector('.reference').textContent = 'reference1';
+            break;
+        case 2:
+            document.querySelector('.type').textContent = 'Es miembro de mesa';
+            document.querySelector('.region').textContent = 'Amazonas/Bagua/Bagua';
+            document.querySelector('.local').textContent = 'local2';
+            document.querySelector('.address').textContent = 'address2';
+            document.querySelector('.reference').textContent = 'reference2';
+            break;
+        case 3:
+            document.querySelector('.type').textContent = 'No es miembro de mesa';
+            document.querySelector('.region').textContent = 'Amazonas/Bongará/Jumbilla';
+            document.querySelector('.local').textContent = 'local3';
+            document.querySelector('.address').textContent = 'address3';
+            document.querySelector('.reference').textContent = 'reference3';
+            break;
+        case 4:
+            document.querySelector('.type').textContent = 'Es miembro de mesa';
+            document.querySelector('.region').textContent = 'Amazonas/Condorcanqui/Santa María de Nieva';
+            document.querySelector('.local').textContent = 'local4';
+            document.querySelector('.address').textContent = 'address4';
+            document.querySelector('.reference').textContent = 'reference4';
+            break;
+        case 5:
+            document.querySelector('.type').textContent = 'No es miembro de mesa';
+            document.querySelector('.region').textContent = 'Amazonas/Luya/Lámud';
+            document.querySelector('.local').textContent = 'local5';
+            document.querySelector('.address').textContent = 'address5';
+            document.querySelector('.reference').textContent = 'reference5';
+            break;
+        case 6:
+            document.querySelector('.type').textContent = 'Es miembro de mesa';
+            document.querySelector('.region').textContent = 'Amazonas/Rodríguez de Mendoza/Mendoza';
+            document.querySelector('.local').textContent = 'local6';
+            document.querySelector('.address').textContent = 'address6';
+            document.querySelector('.reference').textContent = 'reference6';
+            break;
+        case 7:
+            document.querySelector('.type').textContent = 'No es miembro de mesa';
+            document.querySelector('.region').textContent = 'Amazonas/Utcubamba/Bagua Grande';
+            document.querySelector('.local').textContent = 'local7';
+            document.querySelector('.address').textContent = 'address7';
+            document.querySelector('.reference').textContent = 'reference7';
+            break;
+        case 8:
+            document.querySelector('.type').textContent = 'Es miembro de mesa';
+            document.querySelector('.region').textContent = 'Áncash/Chimbote/Santa';
+            document.querySelector('.local').textContent = 'local8';
+            document.querySelector('.address').textContent = 'address8';
+            document.querySelector('.reference').textContent = 'reference8';
+            break;
+        case 9:
+            document.querySelector('.type').textContent = 'No es miembro de mesa';
+            document.querySelector('.region').textContent = 'Áncash/Huaraz/Huaraz';
+            document.querySelector('.local').textContent = 'local9';
+            document.querySelector('.address').textContent = 'address9';
+            document.querySelector('.reference').textContent = 'reference9';
+            break;
+        case 10:
+            document.querySelector('.type').textContent = 'Es miembro de mesa';
+            document.querySelector('.region').textContent = 'Áncash/Casma/Casma';
+            document.querySelector('.local').textContent = 'local10';
+            document.querySelector('.address').textContent = 'address10';
+            document.querySelector('.reference').textContent = 'reference10';
+            break;
+        case 11:
+            document.querySelector('.type').textContent = 'No es miembro de mesa';
+            document.querySelector('.region').textContent = 'Áncash/Huarmey/Huarmey';
+            document.querySelector('.local').textContent = 'local11';
+            document.querySelector('.address').textContent = 'address11';
+            document.querySelector('.reference').textContent = 'reference11';
+            break;
+        case 12:
+            document.querySelector('.type').textContent = 'Es miembro de mesa';
+            document.querySelector('.region').textContent = 'Áncash/Caraz/Huaylas';
+            document.querySelector('.local').textContent = 'local12';
+            document.querySelector('.address').textContent = 'address12';
+            document.querySelector('.reference').textContent = 'reference12';
+            break;
+        case 13:
+            document.querySelector('.type').textContent = 'No es miembro de mesa';
+            document.querySelector('.region').textContent = 'Áncash/Carhuaz/Carhuaz';
+            document.querySelector('.local').textContent = 'local13';
+            document.querySelector('.address').textContent = 'address13';
+            document.querySelector('.reference').textContent = 'reference13';
+            break;
+        
+        default:
+            break;
+    }
+
+    https://www.google.com/search?q=Direcciones+de+Lima+ejemplos&safe=strict&client=firefox-b-d&sa=X&biw=1536&bih=760&tbm=isch&source=iu&ictx=1&fir=56xs-lTGls1IXM%252CwzBFc3y1eg2B-M%252C_&vet=1&usg=AI4_-kTdHhTmlppTRltAlYfAi5Cuz-bxVA&ved=2ahUKEwj53ZqpsMTvAhWXJrkGHSPPCSYQ9QF6BAgMEAE#imgrc=QW1D1vsHA9n7ZM

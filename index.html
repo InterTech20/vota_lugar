@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- my style -->
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Consulta tu Local de Votación
+    y si eres Miembro de Mesa</title>
+    
+</head>
+<body>
+
+    <!-- loader -->
+<div class="loader"></div>
+
+<!-- modal -->
+<div class="alert">
+    
+    <div class="container_modal">
+    <div class="modal_dispose" onclick="exit_modal(1);" title="Cerrar">
+        <i class="fas fa-times modal_exit"></i>
+    </div>
+    
+    <div class="modal_body">
+        <i class="fas fa-exclamation-triangle icon_info" ></i>
+        <p class="text_info">Ciudadano no encontrado</p>
+    </div>
+    </div>
+
+</div>
+
+<!-- form -->
+<div class="form">
+    
+        <div class="form__item">
+            <img src="logo_elecciones2021.svg" alt="" class="form_img">
+            <h1 class="form_title">Consulta tu Local de Votación y si 
+                eres Miembro de Mesa</h1>
+
+        </div>
+
+        <div class="form__item">
+            <input type="text" class="from__input" name=""  id="search" placeholder="Ingrese su DNI" title="Debe ingresar 8 números por favor" onkeypress='return validaNumericos(event)',>
+            <input type="button" value="Consultar" class="from__btn">
+        </div>
+
+</div>
+    
+
+  <!-- script font-awesome -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
+
+<!-- my script -->
+    <script src="main.js"></script>
+    <script src="datos.js"></script>
+</body>
+</html>
