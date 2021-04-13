@@ -113,9 +113,9 @@ function mostrarData(datos) {
 }
 
 
-let href_0='<a target="_blank" href="http://www.facebook.com/sharer.php?u=http://www.desarrolloweb.com/" title="Comparte en facebook" class="modal_social"><i class="fab fa-facebook-square"></i></a>';
-let href_1='<a target="_blank" href="http://twitter.com/home?status=http://www.desarrolloweb.com/" title="Comparte en twitter" class="modal_social"><i class="fab fa-twitter-square"></i></a>';
-let href_2='<a target="_blank" href="https://api.whatsapp.com/send?text=http://www.desarrolloweb.com/" class="modal_social" title="Comparte en Whatsapp"><i class="fab fa-whatsapp-square"></i></a>';
+let href_0='<a target="_blank" href="http://www.facebook.com/sharer.php?u=https://intertech20.github.io/vota_lugar/" class="modal_social"><i class="fab fa-facebook-square"></i></a>';
+let href_1='<a target="_blank" href="http://twitter.com/home?status=https://intertech20.github.io/vota_lugar/" title="Comparte en twitter" class="modal_social"><i class="fab fa-twitter-square"></i></a>';
+let href_2='<a target="_blank" href="https://api.whatsapp.com/send?text=https://intertech20.github.io/vota_lugar/" class="modal_social" title="Comparte en Whatsapp"><i class="fab fa-whatsapp-square"></i></a>';
 
 
 function crearVentana() {
