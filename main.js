@@ -205,7 +205,7 @@ console.log(modal);
 document.getElementById(modal).style = "display: flex";  
    document.getElementById(modal).innerHTML = `
 
- <!-- modal social -->
+ <!-- modal -->
     <div class="container_modal">
          <div class="modal_dispose" onclick='exit_modal()' title="Cerrar">
         <i class="fas fa-times modal_exit"></i>
