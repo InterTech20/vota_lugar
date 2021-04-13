@@ -115,7 +115,7 @@ body{
 }
 
 /* Loader */
-.loader,#shared,.alert{
+.loader,.modal,.alert{
     position: absolute;
     display: none;
     justify-content: center;
