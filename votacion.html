@@ -4,51 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-        crossorigin="anonymous" />
+    <!-- my style -->
     <link rel="stylesheet" href="style.css">
+    
     <title>Consulta tu Local de Votación
     y si eres Miembro de Mesa</title>
+    
 </head>
 <body>
-    <div class="container">
-        <div class="col">
-            <h1 class="col_welcon">Bienvenido(A)</h1>
-            <span class="type col_lbl" >No es miembro de mesa</span>
-            <span class="col_lbl">Nombres:</span>
-            <span class="name col_lbl">Jhonathan O'brian</span>
-            <span class="col_lbl">Apellidos:</span>
-            <span class="lastname col_lbl">Saavedra Seminario</span>
-            <span class="col_lbl">Dni:</span>
-            <span class="dni col_lbl">75952420</span>
 
-            <a href="#" class="col_btn col_btn1"><i class="fas fa-laptop"></i>Capacítate</a>
-            <a href="#" class="col_btn col_btn2"><i class="fas fa-share-alt"></i>Comparte</a>
-            <a href="#" class="col_btn col_btn2"> <i class="fas fa-print"></i>Imprime</a>
+    <!-- loader -->
+<div class="loader"></div>
 
-        </div>
+<!-- modal -->
+<div class="alert" id="modal_error"></div>
 
-        <div class="col">
-                <span class="region col_lbl">PIURA/SULLANA/SULLANA</span>
-
-                <span class="col_lbl">Tipo de voto:</span>
-                <span class="col_lbl type_voto">CONVENCIONAL</span>
-                
-                <span class="col_lbl">N° de Mesa de Sufragio:</span>
-                <span class="num_order col_lbl">N° de Orden: 16</span>
-
-                <span class="col_lbl">Local de Votación</span>
-                <span class="local col_lbl">IE INICIAL  516 VIRGUEN DEL PERPETUO SOCORRO</span>
-
-                <span class="col_lbl">Dirección:</span>
-                <span class="address col_lbl">CALLE MARIA AUXILIADORA 1201</span>
-
-                <span class="col_lbl">Referencia:</span>
-                <span class="reference col_lbl">COSTADO DELA IE MARIA REYNA DE LA PAZ</span>
+<!-- form -->
+<div class="form">
+    
+        <div class="form__item">
+            <img src="logo_elecciones2021.svg" alt="" class="form_img">
+            <h1 class="form_title">Consulta tu Local de Votación y si 
+                eres Miembro de Mesa</h1>
 
         </div>
-    </div>
-    <script src="main.js"></script>
+
+        <div class="form__item">
+            <input type="text" class="from__input" name=""  id="search" placeholder="Ingrese su DNI" title="Debe ingresar 8 números por favor" onkeypress="return validaNumericos(event);"/>
+            <input type="button" value="Consultar" class="from__btn"/>
+        </div>
+
+</div>
+    
+
+  <!-- script font-awesome -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
+
+<!-- my script -->
+
+<script src="main.js"></script>
+    <script src="datos.js"></script>
 </body>
 </html>
