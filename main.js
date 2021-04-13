@@ -70,7 +70,8 @@ function carga_data() {
             if (data.dni == undefined) {
                 load.style = "display: none;";//habilitar el load
                 load.innerHTML = '<div class="loader__spiner"></div>';
-                document.querySelector('.alert').style = "display: flex;";
+//                 document.querySelector('.alert').style = "display: flex;";
+                 create_modal("alert","<i class="fas fa-exclamation-triangle icon_info" ></i>","<p class="text_info">Ciudadano no encontrado</p>","");
             } else {
 
                 crearVentana();
@@ -121,15 +122,15 @@ function crearVentana() {
     <div id="shared"></div>
 
 <div class="alert">
-    <div class="container_modal">
-    <div class="modal_dispose" onclick="exit_modal(1);" title="Cerrar">
-        <i class="fas fa-times modal_exit"></i>
-    </div>
+//     <div class="container_modal">
+//     <div class="modal_dispose" onclick="exit_modal(1);" title="Cerrar">
+//         <i class="fas fa-times modal_exit"></i>
+//     </div>
 
-    <div class="modal_body">
-        <p class="text_info text_inf0">Para votar más rápido, imprime y/o anota los siguientes datos.</p>
-    </div>
-    </div>
+//     <div class="modal_body">
+//         <p class="text_info text_inf0">Para votar más rápido, imprime y/o anota los siguientes datos.</p>
+//     </div>
+//     </div>
 </div>
 
 <!-- from info -->
@@ -145,7 +146,13 @@ function crearVentana() {
             <span class="dni col_lbl" id="DNI"></span>
 
             <a href="https://cvae.eleccionesgenerales2021.pe/" class="col_btn col_btn1"><i class="fas fa-laptop"></i>  Capacítate</a>
-            <a class="col_btn col_btn2" onclick="Share()"><i class="fas fa-share-alt"></i>  Comparte</a>
+            <a class="col_btn col_btn2" onclick="
+               create_modal(shared,"
+"<a target="_blank" href="http://www.facebook.com/sharer.php?u=http://www.desarrolloweb.com/" title="Comparte en facebook" class="modal_social"><i class="fab fa-facebook-square"></i></a>",
+        "<a target="_blank" href="http://twitter.com/home?status=http://www.desarrolloweb.com/" title="Comparte en twitter" class="modal_social"><i class="fab fa-twitter-square"></i></a>"
+        "<a target="_blank" href="https://api.whatsapp.com/send?text=http://www.desarrolloweb.com/" class="modal_social" title="Comparte en Whatsapp"><i class="fab fa-whatsapp-square"></i></a>
+
+")"><i class="fas fa-share-alt"></i>  Comparte</a>
             <a class="col_btn col_btn2" onclick="PDFtoPrint()"> <i class="fas fa-print"></i>  Imprime</a>
 
         </div>
@@ -213,21 +220,43 @@ function PDFtoPrint(){
     window.print();
 }
 
-function Share(){
+// function Share(){
 
-    document.getElementById("shared").style = "display: flex;";
-    document.getElementById("shared").innerHTML = `
-    <!-- modal social -->
+//     document.getElementById("shared").style = "display: flex;";
+//     document.getElementById("shared").innerHTML = `
+//     <!-- modal social -->
+//     <div class="container_modal">
+//         <div class="modal_dispose" onclick="exit_modal(2)" title="Cerrar">
+//         <i class="fas fa-times modal_exit"></i>
+//         </div>
+
+//         <div class="modal_body">
+//         <a target="_blank" href="http://www.facebook.com/sharer.php?u=http://www.desarrolloweb.com/" title="Comparte en facebook" class="modal_social"><i class="fab fa-facebook-square"></i></a>
+//         <a target="_blank" href="http://twitter.com/home?status=http://www.desarrolloweb.com/" title="Comparte en twitter" class="modal_social"><i class="fab fa-twitter-square"></i></a>
+//         <a target="_blank" href="https://api.whatsapp.com/send?text=http://www.desarrolloweb.com/" class="modal_social" title="Comparte en Whatsapp"><i class="fab fa-whatsapp-square"></i></a>
+//         </div>
+
+//     </div>`;
+
+// }
+
+//crear una ventana modal
+function create_modal(modal,text_inf0,text_inf1,text_inf2){
+
+    document.getElementById(modal).style = "display: flex;";
+    document.getElementById(modal).innerHTML = `
+
+<!-- modal social -->
     <div class="container_modal">
         <div class="modal_dispose" onclick="exit_modal(2)" title="Cerrar">
         <i class="fas fa-times modal_exit"></i>
         </div>
-
+               ${text_inf0}
+               ${text_inf1}
+               ${text_inf2}
         <div class="modal_body">
-        <a target="_blank" href="http://www.facebook.com/sharer.php?u=http://www.desarrolloweb.com/" title="Comparte en facebook" class="modal_social"><i class="fab fa-facebook-square"></i></a>
-        <a target="_blank" href="http://twitter.com/home?status=http://www.desarrolloweb.com/" title="Comparte en twitter" class="modal_social"><i class="fab fa-twitter-square"></i></a>
-        <a target="_blank" href="https://api.whatsapp.com/send?text=http://www.desarrolloweb.com/" class="modal_social" title="Comparte en Whatsapp"><i class="fab fa-whatsapp-square"></i></a>
-        </div>
+          
+</div>
 
     </div>`;
 
@@ -241,4 +270,4 @@ function exit_modal(btn_press) {
         document.getElementById("shared").style = "display: none;";
     }
     
-}
+
