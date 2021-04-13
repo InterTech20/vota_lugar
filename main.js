@@ -71,7 +71,7 @@ function carga_data() {
                 load.style = "display: none;";//habilitar el load
                 load.innerHTML = '<div class="loader__spiner"></div>';
 //                 document.querySelector('.alert').style = "display: flex;";
-                 create_modal('modal0','<i class="fas fa-exclamation-triangle icon_info" ></i>','<p class="text_info">Ciudadano no encontrado</p>','');
+//                  create_modal('modal0','<i class="fas fa-exclamation-triangle icon_info" ></i>','<p class="text_info">Ciudadano no encontrado</p>','');
             } else {
                 crearVentana();
                 mostrarData(data);
