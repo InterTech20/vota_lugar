@@ -71,12 +71,12 @@ function carga_data() {
                 load.style = "display: none;";//habilitar el load
                 load.innerHTML = '<div class="loader__spiner"></div>';
 //                 document.querySelector('.alert').style = "display: flex;";
-//                  create_modal('modal0','<i class="fas fa-exclamation-triangle icon_info" ></i>','<p class="text_info">Ciudadano no encontrado</p>','');
+              create_modal('modal0','<i class="fas fa-exclamation-triangle icon_info" ></i>','<p class="text_info">Ciudadano no encontrado</p>','');
             } else {
                 crearVentana();
                 mostrarData(data);
 //                 document.querySelector('.alert').style = "display: flex;";
-
+               create_modal('modal20','<p class="text_info text_inf0">Para votar más rápido, imprime y/o anota los siguientes datos.</p>','','');
                 setTimeout(() => { //se recargara el body
                     document.location.reload();
                 }, 50000);
@@ -120,17 +120,7 @@ function crearVentana() {
     <!-- modal info -->
     <div id="shared"></div>
 
-<div class="alert">
-//     <div class="container_modal">
-//     <div class="modal_dispose" onclick="exit_modal(1);" title="Cerrar">
-//         <i class="fas fa-times modal_exit"></i>
-//     </div>
-
-//     <div class="modal_body">
-//         <p class="text_info text_inf0">Para votar más rápido, imprime y/o anota los siguientes datos.</p>
-//     </div>
-//     </div>
-</div>
+<div class="alert" id="modal20"></div>
 
 <!-- from info -->
     <div class="container" >
