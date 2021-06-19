@@ -83,7 +83,6 @@ function carga_data() {
         }).catch(error => console.log(error));    
 }
 
-//76594220
 function getJson() {
     return 'https://dniruc.apisperu.com/api/v1/dni/' +search.value+ '?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImprbTc4OTc1QHp3b2hvLmNvbSJ9.DIOyPMNAVeODWYyIn9zACls_Ep5B0vKVJ1KM5Zv4CfQ';
 }
