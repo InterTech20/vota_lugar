@@ -21,7 +21,7 @@ search.addEventListener("copy", function (e) {
     e.preventDefault();
 });
 
-//funcion para que el input text solo recivira numeros
+//funcion para que el input text solo recibirá numeros
  function validaNumericos(event) {
      if (event.charCode >= 48 && event.charCode <= 57) {
 
