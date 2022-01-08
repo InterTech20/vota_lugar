@@ -311,12 +311,12 @@ text-transform: uppercase;
   padding: 20px;
   font-size: 50px;
   color: var(--color4);  
+  transition: 2s all ease-in-out;
 }
 
 .modal_social:hover{
-  transition: 2s all ease-in-out;
-  font-size: 35px;
-  color: #f0b8be;   
+  color: #f0b8be;
+  transform: scale(1.5); 
 }
 
 .icon_info{
